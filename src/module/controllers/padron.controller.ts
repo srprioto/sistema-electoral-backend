@@ -31,11 +31,7 @@ class PadronController {
 
         const { body } = req;
 
-        const existeElector:any = await Padron.findOne({
-            where: {
-                dni: body.dni
-            }
-        })
+        const existeElector:any = await Padron.findOne({ where: { dni: body.dni } });
 
         if (!!existeElector) {
             return res.status(400).json({

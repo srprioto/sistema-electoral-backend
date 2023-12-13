@@ -3,8 +3,10 @@ import { db } from '../../config/database/connection';
 
 const Resultados = db.define("Resultados", {
 
-    // nombre_lista: { type: DataTypes.STRING },
-    // alcalde: { type: DataTypes.STRING },
+    padronId: { type: DataTypes.INTEGER },
+    candidatoId: { type: DataTypes.INTEGER },
+    nivel: { type: DataTypes.STRING }
+
     // teniente_alcalde: { type: DataTypes.STRING },
     // regidor_comunicacion: { type: DataTypes.STRING },
     // regidor_derechos: { type: DataTypes.STRING },
