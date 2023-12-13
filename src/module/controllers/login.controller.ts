@@ -7,21 +7,28 @@ class LoginController {
 
     async loginElector (req:Request, res:Response) { 
         const { body } = req;
-        const dni:string = body.dni;
 
+        const dni:string = body.dni;
+        
         const elector:any = await Padron.findOne({ where: { dni: dni } })
 
-        if (!!elector) {
+        // estados
+        // 1 - conectar
+        // 2 - voto listo
+        // 3 - no existe
 
+        if (!!elector) {
             res.json({
-                success: "ok",
-                resto: elector.voto_estado,
-                dni: body.dni
+                success: !elector.voto_estado ? "conectar" : "voto listo",
+                state: !elector.voto_estado ? 1 : 2,
+                elector: elector
             })
-            
-        } else {
+        } else { 
+            // usuario no existe
             res.json({
-                success: "fail",
+                success: "no existe",
+                state: 3,
+                elector: elector
             })
         }
 
