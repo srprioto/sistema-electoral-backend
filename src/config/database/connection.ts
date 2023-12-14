@@ -1,14 +1,14 @@
 import { Sequelize } from 'sequelize';
 
-const namedb:string = "u533990259_sistema_electo";
-const userdb:string = "u533990259_sis_electo";
-const passdb:string = "TjHSC5#2?y2/";
-const hostdb:string = "srv794.hstgr.io";
+// const namedb:string = "u533990259_sistema_electo";
+// const userdb:string = "u533990259_sis_electo";
+// const passdb:string = "TjHSC5#2?y2/";
+// const hostdb:string = "srv794.hstgr.io";
 
-// const namedb:string = "sistema_electoral";
-// const userdb:string = "root";
-// const passdb:string = "";
-// const hostdb:string = "localhost";
+const namedb:string = "sistema_electoral";
+const userdb:string = "root";
+const passdb:string = "";
+const hostdb:string = "localhost";
 
 const dialectdb:any = "mysql";
 
