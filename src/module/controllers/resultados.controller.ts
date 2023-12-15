@@ -60,7 +60,7 @@ class ResultadosController {
         if (!elector.voto_estado) {
             
             await Resultados.create(body);
-            // await Padron.update({ voto_estado: true }, { where: { id: body.padronId } });
+            await Padron.update({ voto_estado: true }, { where: { id: body.padronId } });
 
             res.json({
                 success: true,
