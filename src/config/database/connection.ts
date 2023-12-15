@@ -13,7 +13,7 @@ const hostdb:string = "srv794.hstgr.io";
 const dialectdb:any = "mysql";
 
 
-export const db = new Sequelize(
+export const db:any = new Sequelize(
     namedb, 
     userdb, 
     passdb, 
